@@ -1,0 +1,5 @@
+<meta>
+	<info name="require" author="Katalina" type="script" />
+
+	<script src="require.js" lang="javascript" type="client" />
+</meta>
