@@ -4,8 +4,6 @@ because i require a better way of getting stuff.. and classes.
 
 and they won't let me fix stuff so i did it myself.
 
-[toc]
-
 ## Installing
 
 1. clone this repo into your server's `resources` folder.
