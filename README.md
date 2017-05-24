@@ -4,6 +4,8 @@ because i require a better way of getting stuff.. and classes.
 
 and they won't let me fix stuff so i did it myself.
 
+[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
 ## Installing
 
 1. clone this repo into your server's `resources` folder.
