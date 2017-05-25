@@ -2,7 +2,7 @@
 
 let __cache = new Map()
 
-function require (moduleName) { // eslint-disable-line no-unused-vars
+function require (moduleName, { source = null } = {}) { // eslint-disable-line no-unused-vars
   // don't cache if we start with @
   let cachable = true
 
@@ -31,12 +31,16 @@ function require (moduleName) { // eslint-disable-line no-unused-vars
 
   // just in case API changes... (which i doubt but whatever.)
   let exportProvider = (API.exported !== undefined) ? API.exported : exported
+  if (source !== null) {
+    exportProvider = source
+  }
 
   let resolved = false
   let module = exportProvider
 
   // when the module path is one name, we'll try two files: moduleName.index and moduleName.moduleName
-  if (path.length === 1) {
+  // we don't do this on local sources since everything is a bare file.
+  if (source === null && path.length === 1) {
     let m = path[0]
     module = module[m]
 
@@ -55,6 +59,7 @@ function require (moduleName) { // eslint-disable-line no-unused-vars
     // loop the path, appending to module every time.
     for (let p of path) {
       if (module[p] !== undefined) {
+        // API.sendChatMessage(`added ${p}`)
         module = module[p]
       } else {
         throw new TypeError(`${moduleName} can't be loaded.`)
