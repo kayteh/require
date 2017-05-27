@@ -101,3 +101,9 @@ function require (moduleName, { source = null } = {}) { // eslint-disable-line n
 
   return module
 }
+
+function local (source) { // eslint-disable-line no-unused-vars
+  return (path) => {
+    return require(path, { source })
+  }
+}

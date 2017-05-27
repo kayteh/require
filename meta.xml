@@ -3,7 +3,7 @@
 
 	<script src="require.js" lang="javascript" type="client" />
 
-	<script src="test/requiretest.js" lang="javascript" type="client" />
+<!-- 	<script src="test/requiretest.js" lang="javascript" type="client" />
 	<script src="test/dummyfunction.js" lang="javascript" type="client" />
-	<script src="test/dummyclass.js" lang="javascript" type="client" />
+	<script src="test/dummyclass.js" lang="javascript" type="client" /> -->
 </meta>
