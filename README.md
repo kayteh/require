@@ -90,3 +90,7 @@ function __requireModuleClasses () {
   }
 }
 ```
+
+## Advanced Usage
+
+See the [wiki](https://github.com/kayteh/require/wiki/Advanced-Usage)
